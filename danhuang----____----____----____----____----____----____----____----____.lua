@@ -1,5 +1,5 @@
---学生党不要偷我ui
---我会生气的
+--这只是表面
+--我要会生气的
 local player = game:GetService("Players").LocalPlayer
 local TweenService = game:GetService("TweenService")
 local SoundService = game:GetService("SoundService")
@@ -299,14 +299,14 @@ local function createRainbowText(parent, text, position)
 end
 
 createRainbowText(uiFrame, "QQ交流群: 1002534520", UDim2.new(0.05, 0, 0.55, 0))
-createRainbowText(uiFrame, "作者: 蛋皇", UDim2.new(0.05, 0, 0.65, 0))
-createRainbowText(uiFrame, "公告：目前只更新Ohio脚本 持续更新中...", UDim2.new(0.05, 0, 0.75, 0))
+createRainbowText(uiFrame, "蛋皇牛逼", UDim2.new(0.05, 0, 0.65, 0))
+createRainbowText(uiFrame, "公告：破解知名脚本", UDim2.new(0.05, 0, 0.75, 0))
 
 local title = Instance.new("TextLabel")
 title.Name = "Title"
 title.Size = UDim2.new(1, -40, 0, 40)
 title.Position = UDim2.new(0, 20, 0, 10)
-title.Text = "蛋皇独家脚本"
+title.Text = "Tetrax破解版"
 title.Font = Enum.Font.GothamBlack
 title.TextSize = 28
 title.BackgroundTransparency = 1
@@ -331,7 +331,7 @@ local executeButton = Instance.new("TextButton")
 executeButton.Name = "ExecuteButton"
 executeButton.Size = UDim2.new(0.9, 0, 0, 50)
 executeButton.Position = UDim2.new(0.05, 0, 0.85, 0)
-executeButton.Text = "👉启动蛋皇独家Ohio脚本👈"
+executeButton.Text = "点击执行"
 executeButton.Font = Enum.Font.GothamBlack
 executeButton.TextSize = 20
 executeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -534,7 +534,7 @@ executeButton.MouseButton1Click:Connect(function()
     
     task.wait(1.5)
     statusLabel.Visible = false
-    executeButton.Text = "👉启动蛋皇独家Ohio脚本👈"
+    executeButton.Text = "点击执行"
     executeButton.BackgroundColor3 = Color3.fromRGB(40, 40, 60)
     executeButton.AutoButtonColor = true
 end)
