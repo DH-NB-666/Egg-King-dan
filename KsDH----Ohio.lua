@@ -29,7 +29,7 @@ local MainTitle = C("TextLabel",{
     Size = UDim2.new(1, -40, 0, 60),
     Position = UDim2.new(0.5, -255, 0.1, 0),
     AnchorPoint = Vector2.new(0, 0.5),
-    Text = "蛋皇独家脚本",
+    Text = "Tetrax中文版",
     TextColor3 = Color3.fromRGB(255, 215, 0),
     Font = Enum.Font.GothamBlack,
     TextSize = 32,
@@ -93,7 +93,7 @@ local LS=C("Sound",{SoundId="rbxassetid://9114826721",Volume=0.5,Parent=MF})
 local CS=C("Sound",{SoundId="rbxassetid://9114826721",Volume=0.7,Parent=MF})
 local TS=C("Sound",{SoundId="rbxassetid://137226729",Volume=0.3,Parent=MF})
 
-local FM={"正在召唤蛋皇之力...","加载彩蛋中...","请稍候...","优化中...","喝杯茶等待一下吧..."}
+local FM={"加载...","加载中...","请稍候...","优化中...","最后加载..."}
 
 MF.Size,MF.BackgroundTransparency,TB.BackgroundTransparency=UDim2.new(0,10,0,10),1,1
 Tween:Create(MF,TweenInfo.new(0.8,Enum.EasingStyle.Elastic),{Size=UDim2.new(0,550,0,380),BackgroundTransparency=0.1}):Play()
@@ -103,7 +103,7 @@ wait(1)
 
 for _,s in ipairs({{15,"验证系统"}, {35,"加载模块"}, {65,"初始化"}, {85,"优化"}, {100,"准备就绪"}})do
     local t,m=s[1],s[2]
-    MainTitle.Text = "蛋皇独家脚本 - "..m
+    MainTitle.Text = "Tetrax中文版 - "..m
     ST.Text=math.random(3)==1 and FM[math.random(#FM)]or m.."..."
     
     for i=PB.Size.X.Scale*100,t,0.5 do
@@ -128,7 +128,7 @@ for _,s in ipairs({{15,"验证系统"}, {35,"加载模块"}, {65,"初始化"}, {
     wait(0.3)
 end
 
-MainTitle.Text = "蛋皇独家脚本"
+MainTitle.Text = "Tetrax中文版"
 PT.Text,ST.Text="系统就绪","加载完成"
 CS:Play()
 PP.ParticleEmitter:Emit(100)
